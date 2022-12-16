@@ -12,9 +12,11 @@ import java.sql.SQLException;
 import java.util.List;
 
 public class Main {
+
+    private static UserService userService = new UserServiceImpl();
+
     public static void main(String[] args) {
 
-        UserService userService = new UserServiceImpl();
         userService.createUsersTable();
         userService.saveUser("Name1", "LastName1", (byte) 20);
         userService.saveUser("Name2", "LastName2", (byte) 30);
